@@ -11,7 +11,7 @@
         <text>这是我的对我发表的趣图的描述这是我的对我发表的趣图的描述这是我的对我发表的趣图的描述这是我的对我发表的趣图的描述。</text>
       </view>
       <view class="image">
-        <image class="postingImg" src="http://img4.imgtn.bdimg.com/it/u=1964236026,3056259896&fm=26&gp=0.jpg" lazy-load="true" />
+        <image class="postingImg" src="http://img4.imgtn.bdimg.com/it/u=1964236026,3056259896&fm=26&gp=0.jpg" lazy-load="true" bindtap="previewImg" />
 
       </view>
     </view>

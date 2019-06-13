@@ -55,6 +55,6 @@
     padding: 50rpx 0;
 }
 
-.button-hover{
-    
+.button-hover[type=default]{
+    background-color: #179B16;
 }

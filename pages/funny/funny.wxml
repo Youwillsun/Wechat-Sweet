@@ -1,9 +1,4 @@
-<!--pages/funny/funny.wxml-->
-    <view class="footer">
-      <text class="fa fa-commenting-o">
-        <text class="comment">评论</text>
-      </text>
-      <text class="fa fa-thumbs-o-up">
-        <text class="like">点赞</text>
-      </text>
-    </view>
+<view class="funnyContainer">
+  <img></img>
+  <comment></comment>
+</view>

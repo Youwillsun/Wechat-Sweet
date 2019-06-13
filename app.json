@@ -1,12 +1,12 @@
 {
   "pages": [
-    
     "pages/index/index",
     "pages/funny/funny",
     "pages/posting/posting",
     "pages/ranking/ranking",
     "pages/mine/mine",
-    "components/img/img"
+    "components/img/img",
+    "components/comment/comment"
   ],
   "window": {
     "backgroundTextStyle": "dark",

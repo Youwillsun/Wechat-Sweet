@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "navigationBarTitleText": "段子",
+  "usingComponents": {
+    "img":"../../components/img/img",
+    "comment":"../../components/comment/comment"
+  }
 }

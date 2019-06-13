@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    imgArr: ['http://img4.imgtn.bdimg.com/it/u=1964236026,3056259896&fm=26&gp=0.jpg']
   },
 
   /**
@@ -13,6 +13,16 @@ Page({
    */
   onLoad: function (options) {
 
+  },
+
+  //预览图片
+  previewImg(){
+    var that = this;
+    console.log(123)
+    wx.previewImage({
+      current: 'http://img4.imgtn.bdimg.com/it/u=1964236026,3056259896&fm=26&gp=0.jpg', // 当前显示图片的http链接
+      urls: that.data.imgArr // 需要预览的图片http链接列表
+    })
   },
 
   /**

@@ -1,0 +1,20 @@
+<!-- 这是评论组件 -->
+<view class='commentContainer'>
+  <!-- 发送评论 -->
+  <view class="sendComment">
+    <textarea type='text' class='commentBox' placeholder='这个猪真的很像你！' maxlength='200'></textarea>
+    <button size='mini' class='commentBtn'>发表评论</button>
+  </view>
+  <!-- 评论列表 -->
+  <view class='commentListContainer'>
+    <view class='commentList' wx:for="{{commentList}}" wx:key="index">
+      <view class='commentInfo'>
+        <image src='{{item.user_avatar}}'></image>
+        <text class='userName'>{{item.user_name}}</text>
+      </view>
+      <view class='commentContent'>
+        <text>{{item.comment_content}}</text>
+      </view>
+    </view>
+  </view>
+</view>
