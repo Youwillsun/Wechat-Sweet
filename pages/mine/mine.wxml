@@ -1,0 +1,41 @@
+<view class="mineContainer">
+    <!-- 用户信息区 -->
+    <view class="mineInfo">
+        <image class="minePhoto" src="http://img5.imgtn.bdimg.com/it/u=3768890033,68770272&fm=26&gp=0.jpg" lazy-load="true" />
+        <text class="mineNickName">昵称：我是天霸动霸</text>
+    </view>
+    <!-- 个人服务按钮区 -->
+    <view class="mineService">
+        <!-- 服务标题 -->
+        <view class="serviceTitle">
+            <text>天霸动霸的服务</text>
+        </view>
+        <!-- 服务按钮 -->
+        <view class="serviceButton">
+            <!-- 趣图按钮 -->
+            <view class="imgButton">
+                <button class="myImg" size="mini" type="default" hover-class="button-hover" hover-stop-propagation="true">
+                    我的趣图
+                </button>
+                <button class="imgComment" size="mini" type="default" hover-class="button-hover" hover-stop-propagation="true">
+                    趣图评论
+                </button>
+                <button class="imgLike" size="mini" type="default" hover-class="button-hover" hover-stop-propagation="true">
+                    趣图点赞
+                </button>
+            </view>
+            <!-- 段子按钮 -->
+            <view class="funnyButton">
+                <button class="myFunny" size="mini" type="default" hover-class="button-hover" hover-stop-propagation="true">
+                    我的段子
+                </button>
+                <button class="funnyComment" size="mini" type="default" hover-class="button-hover" hover-stop-propagation="true">
+                    段子评论
+                </button>
+                <button class="funnyLike" size="mini" type="default" hover-class="button-hover" hover-stop-propagation="true">
+                    段子点赞
+                </button>
+            </view>
+        </view>
+    </view>
+</view>

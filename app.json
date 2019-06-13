@@ -1,0 +1,54 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/funny/funny",
+    "pages/posting/posting",
+    "pages/ranking/ranking",
+    "pages/mine/mine",
+    "components/img/img"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Sweet",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#eeeeee",
+    "enablePullDownRefresh": true
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "趣图",
+        "iconPath": "images/image.png",
+        "selectedIconPath": "images/image-fill.png"
+      },
+      {
+        "pagePath": "pages/funny/funny",
+        "text": "段子",
+        "iconPath": "images/article.png",
+        "selectedIconPath": "images/article-fill.png"
+      },
+      {
+        "pagePath": "pages/posting/posting",
+        "text": "发帖",
+        "iconPath": "images/md-add-circle-outline.png",
+        "selectedIconPath": "images/md-add-circle.png"
+      },
+      {
+        "pagePath": "pages/ranking/ranking",
+        "text": "排行",
+        "iconPath": "images/chart.png",
+        "selectedIconPath": "images/chart-fill.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user-fill.png"
+      }
+    ]
+  }
+}

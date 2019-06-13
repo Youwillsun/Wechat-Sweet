@@ -1,0 +1,5 @@
+@import "lib/font-awesome/fontawsome.wxss";
+@import "lib/weui/weui.wxss";
+Page{
+  background-color: #eee;
+}

@@ -1,0 +1,60 @@
+.mineContainer {
+    margin: 30rpx 15rpx;
+}
+
+.mineContainer .mineInfo {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10rpx;
+}
+
+.mineContainer .mineInfo .minePhoto {
+    margin: 50rpx 0;
+    width: 300rpx;
+    height: 300rpx;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    box-shadow: 1rpx 1rpx 3rpx gray;
+}
+
+.mineContainer .mineInfo .mineNickName{
+    font-size: 50rpx;
+    font-family: "楷体";
+}
+
+.mineContainer .mineService{
+    margin-top: 30rpx;
+    background-color: #fff;
+    border-radius: 10rpx;
+    padding: 10rpx;
+}
+
+.mineContainer .mineService .serviceTitle{
+    font-size: 40rpx;
+    font-family: "楷体";
+    margin: 20rpx 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.mineContainer .mineService .serviceButton{
+    
+}
+
+.mineContainer .mineService .serviceButton .imgButton{
+    display: flex;
+    justify-content: space-around;
+    padding: 50rpx 0;
+    border-bottom: 1rpx solid #ccc;
+}
+
+.mineContainer .mineService .serviceButton .funnyButton{
+    display: flex;
+    justify-content: space-around;
+    padding: 50rpx 0;
+}
+
+.button-hover{
+    
+}

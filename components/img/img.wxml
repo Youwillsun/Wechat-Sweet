@@ -1,0 +1,109 @@
+<view class="panelBox">
+  <view class="imgContainer">
+    <!-- 头部区域 -->
+    <view class="header">
+      <image class="userPhoto" src="http://img5.imgtn.bdimg.com/it/u=3768890033,68770272&fm=26&gp=0.jpg" lazy-load="true" />
+      <text class="userNickName">我是天霸动霸</text>
+    </view>
+    <!-- 标题和图片区 -->
+    <view class="content">
+      <view class="describe">
+        <text>这是我的对我发表的趣图的描述这是我的对我发表的趣图的描述这是我的对我发表的趣图的描述这是我的对我发表的趣图的描述。</text>
+      </view>
+      <view class="image">
+        <image class="postingImg" src="http://img4.imgtn.bdimg.com/it/u=1964236026,3056259896&fm=26&gp=0.jpg" lazy-load="true" />
+
+      </view>
+    </view>
+    <!-- 评论和点赞区 -->
+    <view class="footer">
+      <text class="fa fa-commenting-o">
+        <text class="comment">评论</text>
+      </text>
+      <text class="fa fa-thumbs-o-up">
+        <text class="like">点赞</text>
+      </text>
+    </view>
+  </view>
+  <view class="imgContainer">
+    <!-- 头部区域 -->
+    <view class="header">
+      <image class="userPhoto" src="http://img5.imgtn.bdimg.com/it/u=3768890033,68770272&fm=26&gp=0.jpg" lazy-load="true" />
+      <text class="userNickName">我是天霸动霸</text>
+    </view>
+    <!-- 标题和图片区 -->
+    <view class="content">
+      <view class="describe">
+        <text>这是我的对我发表的趣图的描述这是我的对我发表的趣图的描述这是我的对我发表的趣图的描述这是我的对我发表的趣图的描述。</text>
+      </view>
+      <view class="image">
+        <image class="postingImg" src="http://img4.imgtn.bdimg.com/it/u=1964236026,3056259896&fm=26&gp=0.jpg" lazy-load="true" />
+        <image class="postingImg" src="http://img4.imgtn.bdimg.com/it/u=1964236026,3056259896&fm=26&gp=0.jpg" lazy-load="true" />
+      </view>
+    </view>
+    <!-- 评论和点赞区 -->
+    <view class="footer">
+      <text class="fa fa-commenting-o">
+        <text class="comment">评论</text>
+      </text>
+      <text class="fa fa-thumbs-o-up">
+        <text class="like">点赞</text>
+      </text>
+    </view>
+  </view>
+  <view class="imgContainer">
+    <!-- 头部区域 -->
+    <view class="header">
+      <image class="userPhoto" src="http://img5.imgtn.bdimg.com/it/u=3768890033,68770272&fm=26&gp=0.jpg" lazy-load="true" />
+      <text class="userNickName">我是天霸动霸</text>
+    </view>
+    <!-- 标题和图片区 -->
+    <view class="content">
+      <view class="describe">
+        <text>这是我的对我发表的趣图的描述这是我的对我发表的趣图的描述这是我的对我发表的趣图的描述这是我的对我发表的趣图的描述。</text>
+      </view>
+      <view class="image">
+        <image class="postingImg" src="http://img4.imgtn.bdimg.com/it/u=1964236026,3056259896&fm=26&gp=0.jpg" lazy-load="true" />
+        <image class="postingImg" src="http://img4.imgtn.bdimg.com/it/u=1964236026,3056259896&fm=26&gp=0.jpg" lazy-load="true" />        
+        <image class="postingImg" src="http://img4.imgtn.bdimg.com/it/u=1964236026,3056259896&fm=26&gp=0.jpg" lazy-load="true" />
+      </view>
+    </view>
+    <!-- 评论和点赞区 -->
+    <view class="footer">
+      <text class="fa fa-commenting-o">
+        <text class="comment">评论</text>
+      </text>
+      <text class="fa fa-thumbs-o-up">
+        <text class="like">点赞</text>
+      </text>
+    </view>
+  </view>
+  <view class="imgContainer">
+    <!-- 头部区域 -->
+    <view class="header">
+      <image class="userPhoto" src="http://img5.imgtn.bdimg.com/it/u=3768890033,68770272&fm=26&gp=0.jpg" lazy-load="true" />
+      <text class="userNickName">我是天霸动霸</text>
+    </view>
+    <!-- 标题和图片区 -->
+    <view class="content">
+      <view class="describe">
+        <text>这是我的对我发表的趣图的描述这是我的对我发表的趣图的描述这是我的对我发表的趣图的描述这是我的对我发表的趣图的描述。</text>
+      </view>
+      <view class="image">
+        <image class="postingImg" src="http://img4.imgtn.bdimg.com/it/u=1964236026,3056259896&fm=26&gp=0.jpg" lazy-load="true" />
+        <image class="postingImg" src="http://img4.imgtn.bdimg.com/it/u=1964236026,3056259896&fm=26&gp=0.jpg" lazy-load="true" />
+        <image class="postingImg" src="http://img4.imgtn.bdimg.com/it/u=1964236026,3056259896&fm=26&gp=0.jpg" lazy-load="true" />
+        <image class="postingImg" src="http://img4.imgtn.bdimg.com/it/u=1964236026,3056259896&fm=26&gp=0.jpg" lazy-load="true" />
+      </view>
+    </view>
+    <!-- 评论和点赞区 -->
+    <view class="footer">
+      <text class="fa fa-commenting-o">
+        <text class="comment">评论</text>
+      </text>
+      <text class="fa fa-thumbs-o-up">
+        <text class="like">点赞</text>
+      </text>
+    </view>
+  </view>
+</view>

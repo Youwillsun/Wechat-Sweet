@@ -1,0 +1,76 @@
+.panelBox {
+    height: 100%;
+    padding: 20rpx;
+}
+
+.imgContainer {
+    background-color: #fff;
+    border-radius: 5rpx;
+    padding: 10rpx;
+    box-shadow: 3rpx 3rpx 5rpx gray;
+    margin-bottom: 20rpx;
+}
+
+.imgContainer .header {
+    width: 100%;
+    display: flex;
+    align-content: center;
+}
+
+.imgContainer .header .userPhoto {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+}
+
+.imgContainer .header .userNickName {
+    font-size: 32rpx;
+    font-family: "楷体";
+    font-weight: bold;
+    line-height: 130rpx;
+    margin-left: 30rpx;
+}
+
+.imgContainer .content {
+    width: 100%;
+}
+
+.imgContainer .content .describe {
+    height: 70rpx;
+    font-size: 38rpx;
+    font-family: "楷体";
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.imgContainer .content .image{
+    display: flex;
+    flex-flow: wrap;
+}
+
+.imgContainer .content .postingImg {
+    width: 144px;
+    height: 144px;
+    margin: 5rpx;
+    border-radius: 5rpx;
+    vertical-align: middle;
+}
+
+.imgContainer .footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.imgContainer .footer text {
+    font-weight: bold;
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+}
+
+.imgContainer .footer .comment,
+.like {
+    font-family: "楷体";
+    font-size: 40rpx;
+}
