@@ -14,6 +14,74 @@ Page({
   onLoad: function (options) {
 
   },
+  // 点击进入我的趣图页面
+  myImg() {
+    wx.navigateTo({
+      url: '../myImg/myImg',
+      success: (result) => {
+
+      },
+      fail: () => { },
+      complete: () => { }
+    });
+  },
+  // 点击进入我的趣图评论页面
+  myImgComment() {
+    wx.navigateTo({
+      url: '../indexComment/indexComment',
+      success: (result) => {
+
+      },
+      fail: () => { },
+      complete: () => { }
+    });
+  },
+  // 点击进入我点赞的趣图
+  myImgLike() {
+    wx.navigateTo({
+      url: '../myImg/myImg',
+      success: (result) => {
+
+      },
+      fail: () => { },
+      complete: () => { }
+    });
+
+  },
+  // 点击进入我的段子页面
+  myFunny() {
+    wx.navigateTo({
+      url: '../myFunny/myFunny',
+      success: (result) => {
+
+      },
+      fail: () => { },
+      complete: () => { }
+    });
+  },
+  // 点击进入我的趣图评论页面
+  myFunnyComment() {
+    wx.navigateTo({
+      url: '../funnyComment/funnyComment',
+      success: (result) => {
+
+      },
+      fail: () => { },
+      complete: () => { }
+    });
+  },
+  // 点击进入我点赞的趣图
+  myFunnyLike() {
+    wx.navigateTo({
+      url: '../myFunny/myFunny',
+      success: (result) => {
+
+      },
+      fail: () => { },
+      complete: () => { }
+    });
+
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

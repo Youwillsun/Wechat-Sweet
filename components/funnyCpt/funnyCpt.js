@@ -1,29 +1,21 @@
-// components/img/img.js
+// components/funnyCpt/funnyCpt.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgArr: ['http://img4.imgtn.bdimg.com/it/u=1964236026,3056259896&fm=26&gp=0.jpg']
+
   },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
 
   },
-  // 点击头像，进入我的页面
-  headerEvent(){
-    wx.switchTab({
-      url: '../../pages/mine/mine',
-      success: function(res) {},
-      fail: function(res) {},
-      complete: function(res) {},
-    })
-  },
-  // 进入评论详细页
-  indexDetail() {
+  // 跳转到段子详情页
+  funnyComment() {
     // 获取当前页面的路由对象
     var pages = getCurrentPages();
     var currPage = null;
@@ -31,8 +23,7 @@ Page({
       // 获取当前页面的路由
       currPage = pages[pages.length - 1].route;
     }
-
-    if (currPage == 'pages/indexComment/indexComment') {
+    if (currPage == 'pages/funnyComment/funnyComment') {
       // 如果当前的页面就是详情页，那么在次点击就啥也不干
     } else {
       // 保留当前页面跳转到应用内某个页面
@@ -41,7 +32,7 @@ Page({
         mask: false,
         success: (result) => {
           wx.navigateTo({
-            url: '../../pages/indexComment/indexComment',
+            url: '../../pages/funnyComment/funnyComment',
             success: function (res) {
               // 跳转成功，自动关闭加载
               wx.hideToast();
@@ -55,19 +46,20 @@ Page({
       });
     }
   },
-  //预览图片
-  previewImg() {
-    var that = this;
-    wx.previewImage({
-      current: 'http://img4.imgtn.bdimg.com/it/u=1964236026,3056259896&fm=26&gp=0.jpg', // 当前显示图片的http链接
-      urls: that.data.imgArr // 需要预览的图片http链接列表
+  // 点击头像，进入我的页面
+  headerEvent() {
+    wx.switchTab({
+      url: '../../pages/mine/mine',
+      success: function (res) { },
+      fail: function (res) { },
+      complete: function (res) { },
     })
   },
   // 点赞事件
   likeEvent() {
     wx.showToast({
       title: '这是点赞的事件函数',
-      duration:1500
+      duration: 1500
     })
   },
   /**

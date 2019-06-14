@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "段子",
+  "navigationBarTitleText": "我的段子",
   "usingComponents": {
     "funnyCpt":"../../components/funnyCpt/funnyCpt"
   }

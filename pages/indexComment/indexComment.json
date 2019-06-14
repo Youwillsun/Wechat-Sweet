@@ -1,0 +1,7 @@
+  {
+    "navigationBarTitleText": "趣图评论",
+    "usingComponents": {
+      "img": "../../components/img/img",
+      "comment": "../../components/comment/comment"
+    }
+  }

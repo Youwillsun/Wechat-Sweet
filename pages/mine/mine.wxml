@@ -14,25 +14,25 @@
         <view class="serviceButton">
             <!-- 趣图按钮 -->
             <view class="imgButton">
-                <button class="myImg" size="mini" type="default" hover-class="button-hover" hover-stop-propagation="true">
+                <button class="myImg" size="mini" type="default" hover-class="button-hover" hover-stop-propagation="true" bindtap="myImg">
                     我的趣图
                 </button>
-                <button class="imgComment" size="mini" type="default" hover-class="button-hover" hover-stop-propagation="true">
+                <button class="imgComment" size="mini" type="default" hover-class="button-hover" hover-stop-propagation="true" bindtap="myImgComment">
                     趣图评论
                 </button>
-                <button class="imgLike" size="mini" type="default" hover-class="button-hover" hover-stop-propagation="true">
+                <button class="imgLike" size="mini" type="default" hover-class="button-hover" hover-stop-propagation="true" bindtap="myImgLike">
                     趣图点赞
                 </button>
             </view>
             <!-- 段子按钮 -->
             <view class="funnyButton">
-                <button class="myFunny" size="mini" type="default" hover-class="button-hover" hover-stop-propagation="true">
+                <button class="myFunny" size="mini" type="default" hover-class="button-hover"hover-stop-propagation="true" bindtap="myFunny">
                     我的段子
                 </button>
-                <button class="funnyComment" size="mini" type="default" hover-class="button-hover" hover-stop-propagation="true">
+                <button class="funnyComment" size="mini" type="default" hover-class="button-hover"hover-stop-propagation="true" bindtap="myFunnyComment">
                     段子评论
                 </button>
-                <button class="funnyLike" size="mini" type="default" hover-class="button-hover" hover-stop-propagation="true">
+                <button class="funnyLike" size="mini" type="default" hover-class="button-hover"hover-stop-propagation="true" bindtap="myFunnyLike">
                     段子点赞
                 </button>
             </view>

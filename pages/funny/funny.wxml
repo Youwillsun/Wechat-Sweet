@@ -1,4 +1,3 @@
 <view class="funnyContainer">
-  <img></img>
-  <comment></comment>
+    <funnyCpt></funnyCpt>
 </view>

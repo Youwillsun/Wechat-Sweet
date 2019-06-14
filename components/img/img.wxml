@@ -1,108 +1,30 @@
-<view class="panelBox">
-  <view class="imgContainer">
+<view class="panelBox" id="panelBox">
+  <view class="imgContainer" bindtap="indexDetail">
     <!-- 头部区域 -->
     <view class="header">
-      <image class="userPhoto" src="http://img5.imgtn.bdimg.com/it/u=3768890033,68770272&fm=26&gp=0.jpg" lazy-load="true" />
+      <image class="userPhoto" src="http://img5.imgtn.bdimg.com/it/u=3768890033,68770272&fm=26&gp=0.jpg" lazy-load="true" catchtap="headerEvent"/>
       <text class="userNickName">我是天霸动霸</text>
     </view>
     <!-- 标题和图片区 -->
     <view class="content">
-      <view class="describe">
+      <!-- 在这里巧妙的运用id选择器的优先级大于class的优先级的特点。
+      1. 让class选择器所选择的样式，在首页上生效，展示的就是文字断行的效果。
+      2. 在点击进入详情页之后，详情页的css文件里规定了以id选择器所写的样式，让其对class选择器的样式进行覆盖，以此达到文字全部显示的目的 -->
+      <view class="describe" id="detailDescribe">
         <text>这是我的对我发表的趣图的描述这是我的对我发表的趣图的描述这是我的对我发表的趣图的描述这是我的对我发表的趣图的描述。</text>
       </view>
       <view class="image">
-        <image class="postingImg" src="http://img4.imgtn.bdimg.com/it/u=1964236026,3056259896&fm=26&gp=0.jpg" lazy-load="true" bindtap="previewImg" />
+        <image class="postingImg" src="http://img4.imgtn.bdimg.com/it/u=1964236026,3056259896&fm=26&gp=0.jpg" lazy-load="true" catchtap="previewImg" />
 
       </view>
     </view>
     <!-- 评论和点赞区 -->
     <view class="footer">
       <text class="fa fa-commenting-o">
-        <text class="comment">评论</text>
+        <text class="comment">30</text>
       </text>
-      <text class="fa fa-thumbs-o-up">
-        <text class="like">点赞</text>
-      </text>
-    </view>
-  </view>
-  <view class="imgContainer">
-    <!-- 头部区域 -->
-    <view class="header">
-      <image class="userPhoto" src="http://img5.imgtn.bdimg.com/it/u=3768890033,68770272&fm=26&gp=0.jpg" lazy-load="true" />
-      <text class="userNickName">我是天霸动霸</text>
-    </view>
-    <!-- 标题和图片区 -->
-    <view class="content">
-      <view class="describe">
-        <text>这是我的对我发表的趣图的描述这是我的对我发表的趣图的描述这是我的对我发表的趣图的描述这是我的对我发表的趣图的描述。</text>
-      </view>
-      <view class="image">
-        <image class="postingImg" src="http://img4.imgtn.bdimg.com/it/u=1964236026,3056259896&fm=26&gp=0.jpg" lazy-load="true" />
-        <image class="postingImg" src="http://img4.imgtn.bdimg.com/it/u=1964236026,3056259896&fm=26&gp=0.jpg" lazy-load="true" />
-      </view>
-    </view>
-    <!-- 评论和点赞区 -->
-    <view class="footer">
-      <text class="fa fa-commenting-o">
-        <text class="comment">评论</text>
-      </text>
-      <text class="fa fa-thumbs-o-up">
-        <text class="like">点赞</text>
-      </text>
-    </view>
-  </view>
-  <view class="imgContainer">
-    <!-- 头部区域 -->
-    <view class="header">
-      <image class="userPhoto" src="http://img5.imgtn.bdimg.com/it/u=3768890033,68770272&fm=26&gp=0.jpg" lazy-load="true" />
-      <text class="userNickName">我是天霸动霸</text>
-    </view>
-    <!-- 标题和图片区 -->
-    <view class="content">
-      <view class="describe">
-        <text>这是我的对我发表的趣图的描述这是我的对我发表的趣图的描述这是我的对我发表的趣图的描述这是我的对我发表的趣图的描述。</text>
-      </view>
-      <view class="image">
-        <image class="postingImg" src="http://img4.imgtn.bdimg.com/it/u=1964236026,3056259896&fm=26&gp=0.jpg" lazy-load="true" />
-        <image class="postingImg" src="http://img4.imgtn.bdimg.com/it/u=1964236026,3056259896&fm=26&gp=0.jpg" lazy-load="true" />        
-        <image class="postingImg" src="http://img4.imgtn.bdimg.com/it/u=1964236026,3056259896&fm=26&gp=0.jpg" lazy-load="true" />
-      </view>
-    </view>
-    <!-- 评论和点赞区 -->
-    <view class="footer">
-      <text class="fa fa-commenting-o">
-        <text class="comment">评论</text>
-      </text>
-      <text class="fa fa-thumbs-o-up">
-        <text class="like">点赞</text>
-      </text>
-    </view>
-  </view>
-  <view class="imgContainer">
-    <!-- 头部区域 -->
-    <view class="header">
-      <image class="userPhoto" src="http://img5.imgtn.bdimg.com/it/u=3768890033,68770272&fm=26&gp=0.jpg" lazy-load="true" />
-      <text class="userNickName">我是天霸动霸</text>
-    </view>
-    <!-- 标题和图片区 -->
-    <view class="content">
-      <view class="describe">
-        <text>这是我的对我发表的趣图的描述这是我的对我发表的趣图的描述这是我的对我发表的趣图的描述这是我的对我发表的趣图的描述。</text>
-      </view>
-      <view class="image">
-        <image class="postingImg" src="http://img4.imgtn.bdimg.com/it/u=1964236026,3056259896&fm=26&gp=0.jpg" lazy-load="true" />
-        <image class="postingImg" src="http://img4.imgtn.bdimg.com/it/u=1964236026,3056259896&fm=26&gp=0.jpg" lazy-load="true" />
-        <image class="postingImg" src="http://img4.imgtn.bdimg.com/it/u=1964236026,3056259896&fm=26&gp=0.jpg" lazy-load="true" />
-        <image class="postingImg" src="http://img4.imgtn.bdimg.com/it/u=1964236026,3056259896&fm=26&gp=0.jpg" lazy-load="true" />
-      </view>
-    </view>
-    <!-- 评论和点赞区 -->
-    <view class="footer">
-      <text class="fa fa-commenting-o">
-        <text class="comment">评论</text>
-      </text>
-      <text class="fa fa-thumbs-o-up">
-        <text class="like">点赞</text>
+      <text class="fa fa-thumbs-o-up" catchtap="likeEvent">
+        <text class="like">200</text>
       </text>
     </view>
   </view>

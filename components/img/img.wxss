@@ -44,7 +44,7 @@
     white-space: nowrap;
 }
 
-.imgContainer .content .image{
+.imgContainer .content .image {
     display: flex;
     flex-flow: wrap;
 }
@@ -65,12 +65,13 @@
 
 .imgContainer .footer text {
     font-weight: bold;
-    margin-top: 10rpx;
-    margin-bottom: 10rpx;
+    margin-top: 15rpx;
+    margin-bottom: 15rpx;
 }
 
 .imgContainer .footer .comment,
 .like {
     font-family: "楷体";
     font-size: 40rpx;
+    margin-left: 20rpx;
 }

@@ -2,7 +2,7 @@
 <view class='commentContainer'>
   <!-- 发送评论 -->
   <view class="sendComment">
-    <textarea type='text' class='commentBox' placeholder='这个猪真的很像你！' maxlength='200'></textarea>
+    <textarea type='text' class='commentBox' placeholder='请发表你的评论！' maxlength='200'></textarea>
     <button size='mini' class='commentBtn'>发表评论</button>
   </view>
   <!-- 评论列表 -->

@@ -5,8 +5,12 @@
     "pages/posting/posting",
     "pages/ranking/ranking",
     "pages/mine/mine",
+    "pages/indexComment/indexComment",
+    "pages/funnyComment/funnyComment",
     "components/img/img",
-    "components/comment/comment"
+    "components/comment/comment",
+    "components/funnyCpt/funnyCpt",
+    "pages/myFunny/myFunny"
   ],
   "window": {
     "backgroundTextStyle": "dark",

@@ -1,0 +1,13 @@
+#panelBox{
+    padding: 10rpx;
+}
+.funnyCptContainer .content #funnyCptContentDetail{
+    text-indent: 2em;
+    font-size: 38rpx;
+    font-family: '楷体';
+    letter-spacing: 1rpx;
+    display: -webkit-inline-box;
+    overflow: visible;
+    -webkit-line-clamp: 0;
+    -webkit-box-orient: horizontal;
+}

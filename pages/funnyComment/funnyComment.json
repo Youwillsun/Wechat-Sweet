@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "段子评论",
+  "usingComponents": {
+    "funnyCpt":"../../components/funnyCpt/funnyCpt",
+    "comment":"../../components/comment/comment"
+  }
+}

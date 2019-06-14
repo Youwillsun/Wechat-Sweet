@@ -1,0 +1,9 @@
+#panelBox{
+    padding: 10rpx;
+}
+.imgContainer .content #detailDescribe {
+    height: 100%;
+    overflow: visible;
+    text-overflow: none;
+    white-space: normal;
+}

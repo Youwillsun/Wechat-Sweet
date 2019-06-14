@@ -1,0 +1,70 @@
+/* components/funny/funny.wxss */
+.panelBox {
+    height: 100%;
+    padding: 20rpx;
+}
+
+.funnyCptContainer {
+    padding: 10rpx;
+    border-radius: 5rpx;
+    box-shadow: 3rpx 3rpx 5rpx gray;
+    margin-bottom: 20rpx;
+    background-color: #fff;
+}
+
+/* 头部区域 */
+.funnyCptContainer .header {
+    display: flex;
+}
+
+/* 头像 */
+.funnyCptContainer .header .user_HeadImg {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+}
+
+/* 昵称 */
+.funnyCptContainer .header .user_NickName {
+    font-size: 32rpx;
+    font-family: "楷体";
+    font-weight: bold;
+    line-height: 130rpx;
+    margin-left: 30rpx;
+}
+
+/* 段子 */
+.funnyCptContainer .content {
+    width: 100%;
+    height: 100%;
+    box-shadow: 3rpx 3rpx 3rpx gray inset;
+    background-color: rgb(245, 245, 245);
+    border-radius: 5rpx;
+}
+
+.funnyCptContainer .content .funnyCptContent {
+    text-indent: 2em;
+    font-size: 38rpx;
+    font-family: '楷体';
+    letter-spacing: 1rpx;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+/* 点赞评论区 */
+.funnyCptContainer .footer {
+    margin-top: 15rpx;
+    margin-bottom: 15rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.funnyCptContainer .footer .like,
+.comment {
+    font-family: "楷体";
+    font-size: 40rpx;
+    margin-left: 20rpx;
+    font-weight: bold;
+}

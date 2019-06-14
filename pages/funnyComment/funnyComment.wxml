@@ -1,0 +1,4 @@
+<view class="fctContainer">
+    <funnyCpt></funnyCpt>
+    <comment></comment>
+</view>
