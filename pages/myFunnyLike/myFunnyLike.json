@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "我喜欢的段子",
+  "usingComponents": {
+    "funnyCpt":"../../components/funnyCpt/funnyCpt"
+  }
+}

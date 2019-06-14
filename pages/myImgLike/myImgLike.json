@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "我喜欢的趣图",
+  "usingComponents": {
+    "img":"../../components/img/img"
+  }
+}

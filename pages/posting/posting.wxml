@@ -1,2 +1,4 @@
-<!--pages/posting/posting.wxml-->
-<text>pages/posting/posting.wxml</text>
+<view class="postingContainer">
+    <view class="postingImg">发趣图帖</view>
+    <view class="postingFunny">发段子帖</view>
+</view>

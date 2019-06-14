@@ -39,7 +39,7 @@ Page({
   // 点击进入我点赞的趣图
   myImgLike() {
     wx.navigateTo({
-      url: '../myImg/myImg',
+      url: '../myImgLike/myImgLike',
       success: (result) => {
 
       },
@@ -73,7 +73,7 @@ Page({
   // 点击进入我点赞的趣图
   myFunnyLike() {
     wx.navigateTo({
-      url: '../myFunny/myFunny',
+      url: '../myFunnyLike/myFunnyLike',
       success: (result) => {
 
       },
