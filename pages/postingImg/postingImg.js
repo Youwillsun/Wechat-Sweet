@@ -1,4 +1,4 @@
-// pages/posting/posting.js
+// pages/postingImg/postingImg.js
 Page({
 
   /**
@@ -13,30 +13,6 @@ Page({
    */
   onLoad: function (options) {
 
-  },
-
-  // 跳转到发表段子的页面
-  postingFunny(){
-    wx.navigateTo({
-      url: '../postingFunny/postingFunny',
-      success: (result) => {
-        
-      },
-      fail: () => {},
-      complete: () => {}
-    });
-  },
-
-  // 跳转到发表趣图的页面
-  postingImg(){
-    wx.navigateTo({
-      url: '../postingImg/postingImg',
-      success: (result) => {
-        
-      },
-      fail: () => {},
-      complete: () => {}
-    });
   },
 
   /**

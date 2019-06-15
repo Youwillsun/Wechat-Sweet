@@ -1,4 +1,4 @@
-// pages/posting/posting.js
+// pages/postingFunny/postingFunny.js
 Page({
 
   /**
@@ -15,28 +15,32 @@ Page({
 
   },
 
-  // 跳转到发表段子的页面
   postingFunny(){
-    wx.navigateTo({
-      url: '../postingFunny/postingFunny',
+    wx.showToast({
+      title: '这是发表段子帖子的事件',
+      icon: 'none',
+      image: '',
+      duration: 1500,
+      mask: false,
       success: (result) => {
-        
-      },
-      fail: () => {},
-      complete: () => {}
-    });
-  },
+        // 清空文本
+        console.log(123)
 
-  // 跳转到发表趣图的页面
-  postingImg(){
-    wx.navigateTo({
-      url: '../postingImg/postingImg',
-      success: (result) => {
-        
+        // 跳转页面
+        wx.switchTab({
+          url: '../funny/funny',
+          success: (result)=>{
+            
+          },
+          fail: ()=>{},
+          complete: ()=>{}
+        });
+          
       },
       fail: () => {},
       complete: () => {}
     });
+      
   },
 
   /**

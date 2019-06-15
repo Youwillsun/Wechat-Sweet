@@ -1,0 +1,34 @@
+.postingFunnyContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.postingFunnyContainer .textBox{
+    border: 1rpx solid #fff;
+    border-radius: 10rpx;
+    background-color: #fff;
+    margin:30% 20rpx 10% 20rpx;
+    padding: 10rpx;
+    box-shadow: 3rpx 3rpx 15rpx #ccc inset;
+}
+
+.postingFunnyContainer .textBox .text{
+    font-size: 35rpx;
+    font-family: "楷体";
+    letter-spacing: 2rpx;
+}
+
+.postingFunnyContainer .button{
+    width: 90%;
+}
+
+.postingFunnyContainer .button .default{
+    background-color: #000;
+    color: #fff;
+    font-family: "楷体";
+    font-size: 40rpx;
+    font-weight: bold;
+    letter-spacing: 3rpx;
+}

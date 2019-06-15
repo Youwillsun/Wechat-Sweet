@@ -1,0 +1,10 @@
+<view class="postingFunnyContainer">
+    <view class="textBox">
+        <textarea class="text" placeholder="在这里写下你的段子" auto-focus="true" maxlength="-1"></textarea>
+    </view>
+    <view class="button" bindtap="postingFunny">
+        <button class="default" size="default">
+            发表帖子
+        </button>
+    </view>
+</view>

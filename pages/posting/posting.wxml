@@ -1,4 +1,4 @@
 <view class="postingContainer">
-    <view class="postingImg">发趣图帖</view>
-    <view class="postingFunny">发段子帖</view>
+    <view class="postingImg" bindtap="postingImg">发趣图帖</view>
+    <view class="postingFunny" bindtap="postingFunny">发段子帖</view>
 </view>
