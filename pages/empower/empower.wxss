@@ -1,0 +1,34 @@
+.empowerContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 200rpx 0;
+    box-sizing: border-box;
+  } 
+  
+  .userInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .userInfo-avatar {
+    width: 128rpx;
+    height: 128rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+  }
+  
+  .userInfo-nickname {
+    color: #aaa;
+  }
+  
+  .usermotto {
+    margin-top: 200px;
+  }
+  
+  .button-hover{
+      background-color: #44B549;
+  }

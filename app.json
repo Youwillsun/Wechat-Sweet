@@ -1,8 +1,9 @@
 {
   "pages": [
-    "pages/posting/posting",
+    "pages/empower/empower",
     "pages/index/index",
     "pages/funny/funny",
+    "pages/posting/posting",
     "pages/ranking/ranking",
     "pages/mine/mine",
     "pages/indexComment/indexComment",

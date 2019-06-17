@@ -1,0 +1,14 @@
+<view class="empowerContainer">
+    <view class="userInfo">
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUsersInfo" plain="{{true}}" hover-stop-propagation="{{true}}" hover-class="button-hover">
+            获取头像昵称
+        </button>
+        <block wx:else>
+            <image class="userInfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+            <text class="userInfo-nickname">{{userInfo.nickName}}</text>
+            <button class="usermotto" hover-class="button-hover" hover-stop-propagation="false" bindtap="bindViewTap">
+                进入首页
+            </button>
+        </block>
+    </view>
+</view>
