@@ -1,4 +1,4 @@
 <view class="indexContainer">
   <!-- 引入趣图组件 -->
-  <img></img>
+  <img url="{{URL}}"></img>
 </view>

@@ -104,7 +104,7 @@ Page({
       fail: (result) => {
         console.log('通过APP实例获取用户信息失败' + result);
       }
-    });
+    }); 
   },
   //点击按钮发起请求，并进入首页
   bindViewTap: function () {
