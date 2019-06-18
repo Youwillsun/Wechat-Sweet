@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    URL:"https://www.barteam.cn/ApiRoot/FunnyComment/GetFunnyComInfo"
   },
 
   /**
