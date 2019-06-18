@@ -1,14 +1,14 @@
 <view class="mineContainer">
     <!-- 用户信息区 -->
     <view class="mineInfo">
-        <image class="minePhoto" src="http://img5.imgtn.bdimg.com/it/u=3768890033,68770272&fm=26&gp=0.jpg" lazy-load="true" />
-        <text class="mineNickName">昵称：我是天霸动霸</text>
+        <image class="minePhoto" src="{{mineInfo.userHeadImg}}" lazy-load="true" />
+        <text class="mineNickName">昵称：{{mineInfo.userNickName}}</text>
     </view>
     <!-- 个人服务按钮区 -->
     <view class="mineService">
         <!-- 服务标题 -->
         <view class="serviceTitle">
-            <text>天霸动霸的服务</text>
+            <text>{{mineInfo.userNickName}}的服务</text>
         </view>
         <!-- 服务按钮 -->
         <view class="serviceButton">

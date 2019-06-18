@@ -5,14 +5,54 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    // 存储获取到的个人数据
+    mineInfo:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getMineInfo();
+  },
+  // 获取个人信息页面的数据
+  getMineInfo(){
+    var that = this;
+    // 从本地存储中获取到guid的数据
+    wx.getStorage({
+      key: 'Guid',
+      // 获取成功，则发送请求
+      success(res) {
+        wx.request({
+          url: "https://www.barteam.cn/ApiRoot/Personal/GetPersonal",
+          data: {
+            "guid": res.data
+          },
+          header: { 'content-type': 'application/json', 'cookie': wx.getStorageSync('sessionid') },
+          method: 'POST',
+          dataType: 'json',
+          responseType: 'text',
+          success: (result) => {
+            var res = result.data;
+            if (res.status == 'ok') {
+              that.setData({
+                mineInfo: res.Data
+              });
+            }
+          },
+          // 请求失败，展示失败信息
+          fail: (result) => {
+            var res = result.data;
+            if (res.status == 'fail') {
+              wx.showToast({
+                title: res.mess,
+                duration: 1500
+              });
+            }
+          }
+        });
+      }
+    });
   },
   // 点击进入我的趣图页面
   myImg() {

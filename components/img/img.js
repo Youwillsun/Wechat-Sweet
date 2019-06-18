@@ -74,14 +74,49 @@ Component({
     },
     // 点赞事件
     likeEvent() {
-      wx.showToast({
-        title: '这是点赞的事件函数',
-        duration: 1500
+      var that = this;
+      // 从本地存储中获取到guid的数据
+      wx.getStorage({
+        key: 'Guid',
+        // 获取成功，则发送请求
+        success(res) {
+          wx.request({
+            url: "https://www.barteam.cn/ApiRoot/FunnyImgPraised/AddFunnyImgPraised",
+            data: {
+              "guid": res.data
+            },
+            header: { 'content-type': 'application/json', 'cookie': wx.getStorageSync('sessionid') },
+            method: 'POST',
+            dataType: 'json',
+            responseType: 'text',
+            success: (result) => {
+              var res = result.data;
+              if (res.status == 'ok') {
+                wx.showToast({
+                  title: res.mess,
+                  duration: 1500,
+                  success: (result) => {
+                    
+                  }
+                });
+              }
+            },
+            // 请求失败，展示失败信息
+            fail: (result) => {
+              var res = result.data;
+              if (res.status == 'fail') {
+                wx.showToast({
+                  title: res.mess,
+                  duration: 1500
+                });
+              }
+            }
+          });
+        }
       })
     },
   },
-  created: function () {
-    console.log(this.data.ImgData)
+  created: function () { 
   },
   attached: function () {
 
