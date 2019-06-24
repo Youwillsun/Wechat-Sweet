@@ -6,7 +6,9 @@ Page({
    */
   data: {
     // 图片路径
-    imgPath:[]
+    imgPath:[],
+    // base64图片编码数组
+    ImgBase64:[]
   },
 
   /**
@@ -24,26 +26,47 @@ Page({
       sizeType: ['original','compressed'],// 原图或压缩图，默认二者皆有
       sourceType: ['album','camera'],// 相册图片还是相机拍摄，默认二者皆有
       success: (result)=>{
-        var tempFilePath = result.tempFilePaths;// 获取图片路径
+        var tempFilePath = result.tempFilePaths;// 获取图片路径[多个图片获取到的就是一个字符串数组]
+        // 把字符串改成json对象数组
+        var imgPathArray = []
+        for(let n in tempFilePath){
+          imgPathArray.push({path:tempFilePath[n]})
+        }
+        // 给data里对应的数组赋值
         that.setData({
-          imgPath:tempFilePath
-        })
+          imgPath:imgPathArray
+        });
         var fileManager = wx.getFileSystemManager();
+        // 先定义一个数组，用来存放编码后的图片
+        var base64 = [];
         for(let i in tempFilePath){// 循环对多张图片进行格式编码
           fileManager.readFile({
             filePath: tempFilePath[i],// 图片路径
             encoding: 'base64',// 编码格式
             success: (result) => {
-              console.log("第"+i+"张"+result.data);
-            },
-            fail: () => {},
-            complete: () => {}
+              // 把编码后代图片放入数组
+              base64.push(result.data);
+              // console.log(base64);
+            }
           });
         }
+        // 把base64编码设置到data对应的数组里
+        that.setData({
+          ImgBase64:base64
+        })
       },
-      fail: ()=>{},
-      complete: ()=>{}
+      fail: ()=>{
+        wx.showToast({
+          title: '图片错误',
+          duration: 1500
+        });
+      }
     });
+  },
+
+  //上传图片
+  uploadImg(){
+    var that = this;
   },
 
   /**

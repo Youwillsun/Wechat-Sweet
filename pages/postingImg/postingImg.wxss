@@ -1,1 +1,56 @@
-/* pages/postingImg/postingImg.wxss */
+.postingImgContianer{
+    width: 100%;
+}
+
+.postingImgContianer .imgDescribe{
+    margin: 15rpx;
+    padding: 5rpx;
+    background-color: #fff;
+    border-radius: 10rpx;
+}
+
+.postingImgContianer .describeLb{
+    font-family: "楷体";
+    font-weight: bold;
+    margin: 10rpx 0;
+    font-size: 15px;
+    color: #222;
+}
+
+.imgDescribe .describeTa{
+    border: 1rpx solid #ccc;
+    border-radius: 5rpx;
+    box-shadow: 3rpx 3rpx 3rpx #ccc inset;
+    height: 150rpx;
+    font-size: 13px;
+    padding: 10rpx;
+    width: 96.6%;
+}
+
+.previewArea{
+    margin: 15rpx;
+    padding: 10rpx;
+    background-color: #fff;
+}
+
+.previewArea .imgPreview{
+    border-radius: 10rpx;
+    display: flex;
+    flex-flow: wrap;
+}
+
+.previewArea .imgPreview .image{
+    width: 144px;
+    height: 144px;
+    margin: 8rpx;
+    border-radius: 5rpx;
+    vertical-align: middle;
+}
+
+.previewArea .chooseButton{
+    margin: 10rpx 0;
+}
+
+.postingImgContianer .uploadButton{
+    margin: 10rpx 0;
+}
