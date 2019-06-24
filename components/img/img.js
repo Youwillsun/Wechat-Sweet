@@ -73,8 +73,10 @@ Component({
       })
     },
     // 点赞事件
-    likeEvent() {
+    likeEvent(e) {
       var that = this;
+      // 获取点击那个元素的id
+      var thisId = e.currentTarget.dataset.id;
       // 从本地存储中获取到guid的数据
       wx.getStorage({
         key: 'Guid',
@@ -83,7 +85,8 @@ Component({
           wx.request({
             url: "https://www.barteam.cn/ApiRoot/FunnyImgPraised/AddFunnyImgPraised",
             data: {
-              "guid": res.data
+              "guid": res.data,
+              "funnyImgId":thisId
             },
             header: { 'content-type': 'application/json', 'cookie': wx.getStorageSync('sessionid') },
             method: 'POST',
@@ -92,11 +95,14 @@ Component({
             success: (result) => {
               var res = result.data;
               if (res.status == 'ok') {
-                wx.showToast({
-                  title: res.mess,
-                  duration: 1500,
-                  success: (result) => {
-                    
+                //待定，微信小程序没有双向绑定一说，需要特别实现
+                that.data.ImgData.forEach((item,index) => {
+                  if(item.id == thisId){
+                    that.data.ImgData[index].praisedNum++;
+                    wx.showToast({
+                      title: res.mess,
+                      duration: 1500
+                    });
                   }
                 });
               }

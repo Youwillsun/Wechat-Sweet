@@ -9,7 +9,7 @@ Page({
    */
   data: {
     // 保存请求过来的数据
-    ImgData: [],
+    ImgData: []
   },
 
   /**

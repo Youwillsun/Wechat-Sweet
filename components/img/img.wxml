@@ -22,8 +22,8 @@
       <text class="fa fa-commenting-o">
         <text class="comment">评论：{{item.commentNum}}</text>
       </text>
-      <text class="fa fa-thumbs-o-up" catchtap="likeEvent">
-        <text class="like" data-id="{{item.id}}">点赞：{{item.praisedNum}}</text>
+      <text class="fa fa-thumbs-o-up" catchtap="likeEvent" data-id="{{item.id}}">
+        <text class="like">点赞：{{item.praisedNum}}</text>
       </text>
     </view>
   </view>
