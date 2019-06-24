@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    // 图片路径
+    imgPath:[]
   },
 
   /**
@@ -13,6 +14,36 @@ Page({
    */
   onLoad: function (options) {
 
+  },
+  // 从本地相册或相机选择图片
+  chooseImg(){
+    var that = this;
+    // 选择趣图
+    wx.chooseImage({
+      count: 4,// 最大选择数量四张，默认9张
+      sizeType: ['original','compressed'],// 原图或压缩图，默认二者皆有
+      sourceType: ['album','camera'],// 相册图片还是相机拍摄，默认二者皆有
+      success: (result)=>{
+        var tempFilePath = result.tempFilePaths;// 获取图片路径
+        that.setData({
+          imgPath:tempFilePath
+        })
+        var fileManager = wx.getFileSystemManager();
+        for(let i in tempFilePath){// 循环对多张图片进行格式编码
+          fileManager.readFile({
+            filePath: tempFilePath[i],// 图片路径
+            encoding: 'base64',// 编码格式
+            success: (result) => {
+              console.log("第"+i+"张"+result.data);
+            },
+            fail: () => {},
+            complete: () => {}
+          });
+        }
+      },
+      fail: ()=>{},
+      complete: ()=>{}
+    });
   },
 
   /**
