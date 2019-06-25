@@ -31,7 +31,7 @@ Component({
       })
     },
     // 进入评论详细页
-    indexDetail() {
+    indexDetail(e) {
       // 获取当前页面的路由对象
       var pages = getCurrentPages();
       var currPage = null;
@@ -43,13 +43,14 @@ Component({
       if (currPage == 'pages/indexComment/indexComment') {
         // 如果当前的页面就是详情页，那么在次点击就啥也不干
       } else {
+        var thisId = e.currentTarget.dataset.id;
         // 保留当前页面跳转到应用内某个页面
         wx.showToast({
           title: '加载中···',
           mask: false,
           success: (result) => {
             wx.navigateTo({
-              url: '../../pages/indexComment/indexComment',
+              url: '../../pages/indexComment/indexComment?indexId='+thisId,
               success: function (res) {
                 // 跳转成功，自动关闭加载
                 wx.hideToast();

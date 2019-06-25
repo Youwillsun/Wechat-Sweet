@@ -1,4 +1,4 @@
-<view class="postingImgContianer">
+ <view class="postingImgContianer">
     <view class="imgDescribe">
         <label class="describeLb" for="describeTa">趣图描述：</label>
         <textarea id="describeTa" class="describeTa" placeholder="请写下你的描述语" placeholder-style="font-size:13px;" bindblur="describeWord"></textarea>

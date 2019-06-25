@@ -57,7 +57,7 @@ Page({
             encoding: 'base64',// 编码格式
             success: (result) => {
               // 把编码后代图片放入数组
-              base64.push(result.data);
+              base64.push("data:image/png;base64,"+result.data);
               // console.log(base64);
             }
           });
@@ -79,6 +79,7 @@ Page({
   //上传图片
   uploadImg() {
     var that = this;
+    console.log(that.data.ImgBase64)
     // 判断数据不能为空
     if (that.data.describeWord == "") {
       wx.showToast({
@@ -116,7 +117,7 @@ Page({
                 });
               } else {
                 wx.showToast({
-                  title: '未知错误',
+                  title: res.mess,
                   duration: 1500
                 });
               }

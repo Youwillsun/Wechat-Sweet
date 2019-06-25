@@ -70,7 +70,6 @@ Page({
             code: res.code
           })
           // 测试用，获取到code之后，输出code，并获取用户信息函数
-          console.log(that.data.code)
           that.getUsersInfo();
         }
       },
@@ -92,7 +91,6 @@ Page({
           userInfo: result.userInfo,
           hasUserInfo: true
         });
-        console.log(that.data.userInfo)
         // 提示用户授权成功
         wx.showToast({
           title: '授权成功',
@@ -130,17 +128,14 @@ Page({
         wx.removeStorageSync('sessionid');
         wx.setStorageSync("sessionid", result.header["Set-Cookie"]);
         var res = result.data;
-        console.log(res)
         if (res.status == 'ok') {
           // 本地存储获取到的guid
           var guid = res.guid;
-          console.log(guid);
           wx.setStorage({
             key: 'Guid',
             data: guid,
             success(res) {
               // 本地存储成功
-              console.log('信息存储成功' + JSON.stringify(res));
               wx.switchTab({
                 url: '../index/index'
               });
