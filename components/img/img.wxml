@@ -2,7 +2,7 @@
   <view class="imgContainer" wx:for="{{ImgData}}" wx:key="{{ImgData.id}}">
     <!-- 头部区域 -->
     <view class="header">
-      <image class="userPhoto" src="{{item.userHeadImg}}" lazy-load="true" catchtap="headerEvent"/>
+      <image class="userPhoto" src="{{item.userHeadImg}}" lazy-load="true" catchtap="headerEvent" />
       <text class="userNickName">{{item.userNickName}}</text>
     </view>
     <!-- 标题和图片区 -->
@@ -14,12 +14,14 @@
         <text>{{item.imgDescribe}}</text>
       </view>
       <view class="image">
-        <image class="postingImg" src="{{item.imgUrl}}" data-src="{{item.imgUrl}}" lazy-load="true" catchtap="previewImg" />
+        <view wx:for="{{item.imgUrlList}}" wx:key="{{item.imgUrlList}}">
+          <image class="postingImg" src="{{item}}" data-src="{{item}}" lazy-load="true" catchtap="previewImg" />
+        </view>
       </view>
     </view>
     <!-- 评论和点赞区 -->
     <view class="footer">
-      <text class="fa fa-commenting-o" data-id="{{item.id}}" catchtap="indexDetail" >
+      <text class="fa fa-commenting-o" data-id="{{item.id}}" catchtap="indexDetail">
         <text class="comment">评论：{{item.commentNum}}</text>
       </text>
       <text class="fa fa-thumbs-o-up" catchtap="likeEvent" data-id="{{item.id}}">

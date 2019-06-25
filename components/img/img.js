@@ -5,18 +5,15 @@ Component({
       type: Array,
       value: '',
       observer: function (newValue) {
-        // 通过map函数，把图片地址单独抽离成一个字符串数组
-        var imageUrl = newValue.map(item=>{return item.imgUrl});
         this.setData({
-          ImgData:newValue,
-          ImgUrl:imageUrl
+          ImgData: newValue
         });
       }
     }
   },
   data: {
     // 保存传递过来的数据
-    ImgData:[],
+    ImgData: [],
     //把图片单独抽离出来
     ImgUrl: []
   },
@@ -50,7 +47,7 @@ Component({
           mask: false,
           success: (result) => {
             wx.navigateTo({
-              url: '../../pages/indexComment/indexComment?indexId='+thisId,
+              url: '../../pages/indexComment/indexComment?indexId=' + thisId,
               success: function (res) {
                 // 跳转成功，自动关闭加载
                 wx.hideToast();
@@ -67,6 +64,17 @@ Component({
     //预览图片
     previewImg(e) {
       var that = this;
+
+      // 通过foreach函数，把图片地址单独抽离成一个字符串数组
+      var imageUrl = [];
+      that.data.ImgData.forEach(item => {
+        item.imgUrlList.forEach(index => {
+          imageUrl.push(index)
+        })
+      })
+      that.setData({
+        ImgUrl: imageUrl
+      })
       var current = e.target.dataset.src;
       wx.previewImage({
         current: current, // 当前显示图片的http链接
@@ -87,7 +95,7 @@ Component({
             url: "https://www.barteam.cn/ApiRoot/FunnyImgPraised/AddFunnyImgPraised",
             data: {
               "guid": res.data,
-              "funnyImgId":thisId
+              "funnyImgId": thisId
             },
             header: { 'content-type': 'application/json', 'cookie': wx.getStorageSync('sessionid') },
             method: 'POST',
@@ -97,8 +105,8 @@ Component({
               var res = result.data;
               if (res.status == 'ok') {
                 //待定，微信小程序没有双向绑定一说，需要特别实现
-                that.data.ImgData.forEach((item,index) => {
-                  if(item.id == thisId){
+                that.data.ImgData.forEach((item, index) => {
+                  if (item.id == thisId) {
                     that.data.ImgData[index].praisedNum++;
                     wx.showToast({
                       title: res.mess,
@@ -123,7 +131,7 @@ Component({
       })
     },
   },
-  created: function () { 
+  created: function () {
   },
   attached: function () {
 
