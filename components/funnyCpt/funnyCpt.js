@@ -36,6 +36,18 @@ Component({
       }
       if (currPage == 'pages/funnyComment/funnyComment') {
         // 如果当前的页面就是详情页，那么在次点击就啥也不干
+      } else if (currPage == 'pages/myFunny/myFunny') {
+        wx.showToast({
+          title: '此页面暂不支持评论',
+          icon: 'none',
+          duration: 1000
+        })
+      } else if (currPage == 'pages/myFunnyLike/myFunnyLike') {
+        wx.showToast({
+          title: '此页面暂不支持评论',
+          icon: 'none',
+          duration: 1000
+        })
       } else {
         // 获取到每个段子的id
         let funnyId = e.currentTarget.dataset.id
@@ -73,50 +85,74 @@ Component({
       var that = this;
       // 获取点击那个元素的id
       var funnyLikeId = e.currentTarget.dataset.id;;
-      console.log(funnyLikeId)
-      // 从本地存储中获取到guid的数据
-      wx.getStorage({
-        key: 'Guid',
-        // 获取成功，则发送请求
-        success(res) {
-          wx.request({
-            url: "https://www.barteam.cn/ApiRoot/JokePraised/AddJokePraised",
-            data: {
-              "guid": res.data,
-              "jokeId": funnyLikeId
-            },
-            header: { 'content-type': 'application/json', 'cookie': wx.getStorageSync('sessionid') },
-            method: 'POST',
-            dataType: 'json',
-            responseType: 'text',
-            success: (result) => {
-              var res = result.data;
-              if (res.status == 'ok') {
-                //待定，微信小程序没有双向绑定一说，需要特别实现
-                that.data.jokeInfoList.forEach((item, index) => {
-                  if (item.id == funnyLikeId) {
-                    that.data.jokeInfoList[index].praisedNum++;
-                    wx.showToast({
-                      title: res.mess,
-                      duration: 1000
-                    });
-                  }
-                });
+
+      // 获取当前页面的路由对象
+      var pages = getCurrentPages();
+      var currPage = null;
+      if (pages.length) {
+        // 获取当前页面的路由
+        currPage = pages[pages.length - 1].route;
+      }
+      if (currPage == 'pages/myFunny/myFunny') {
+        wx.showToast({
+          title: '此页面暂不支持点赞',
+          icon: 'none',
+          duration: 1000
+        })
+      } else if (currPage == 'pages/myFunnyLike/myFunnyLike') {
+        wx.showToast({
+          title: '此页面暂不支持点赞',
+          icon: 'none',
+          duration: 1000
+        })
+      } else {
+        // 从本地存储中获取到guid的数据
+        wx.getStorage({
+          key: 'Guid',
+          // 获取成功，则发送请求
+          success(res) {
+            wx.request({
+              url: "https://www.barteam.cn/ApiRoot/JokePraised/AddJokePraised",
+              data: {
+                "guid": res.data,
+                "jokeId": funnyLikeId
+              },
+              header: {
+                'content-type': 'application/json',
+                'cookie': wx.getStorageSync('sessionid')
+              },
+              method: 'POST',
+              dataType: 'json',
+              responseType: 'text',
+              success: (result) => {
+                var res = result.data;
+                if (res.status == 'ok') {
+                  //待定，微信小程序没有双向绑定一说，需要特别实现
+                  that.data.jokeInfoList.forEach((item, index) => {
+                    if (item.id == funnyLikeId) {
+                      that.data.jokeInfoList[index].praisedNum++;
+                      wx.showToast({
+                        title: res.mess,
+                        duration: 1000
+                      });
+                    }
+                  });
+                }
+              },
+              // 请求失败，展示失败信息
+              fail: (result) => {
+                var res = result.data;
+                if (res.status == 'fail') {
+                  wx.showToast({
+                    title: res.mess,
+                    duration: 1000
+                  })
+                }
               }
-            },
-            // 请求失败，展示失败信息
-            fail: (result) => {
-              var res = result.data;
-              if (res.status == 'fail') {
-                wx.showToast({
-                  title: res.mess,
-                  duration: 1000
-                })
-              }
-            }
-          });
-        }
-      })
+            });
+          }
+        })
+      }
     }
   },
 
