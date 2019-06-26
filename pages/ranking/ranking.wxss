@@ -1,1 +1,56 @@
-/* pages/ranking/ranking.wxss */
+/* 趣图的样式 */
+
+.rank_wrap .funnyName {
+    font-size: 60rpx;
+    display: block;
+    padding-top: 5rpx;
+    padding-left: 110rpx;
+    padding-bottom: 10rpx;
+    font-weight: bold;
+}
+
+.rank_wrap .funnyImg {
+    background-color: white;
+    color: black;
+    height: 140rpx;
+    width: 95%;
+    display: flex;
+    padding-top: 60rpx;
+    margin-bottom: 25rpx;
+    box-shadow: 0rpx 0rpx 10rpx #8587;
+    margin-top: 25rpx;
+    margin-left: 20rpx;
+}
+
+.rank_wrap .funnyImg .rank {
+    font-weight: bold;
+    padding-left: 55rpx;
+}
+
+.rank_wrap .funnyImg image {
+    border-radius: 25%;
+    width: 100rpx;
+    height: 100rpx;
+    margin-left: 20rpx;
+}
+
+.rank_wrap .funnyImg .name {
+    display: block;
+    text-align: center;
+    width: 250rpx;
+    padding-top: 10rpx;
+    /* 多余文字用省略号显示 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 30rpx;
+    font-size: 40rpx;
+}
+
+.rank_wrap .funnyImg .likes {
+    padding-left: 10rpx;
+    font-size: 35rpx;
+    padding-top: 15rpx;
+    color: rgb(168, 17, 17);
+    font-weight: bold;
+}

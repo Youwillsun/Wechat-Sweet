@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "navigationBarTitleText": "趣图排行榜",
+  "usingComponents": {},
+  "enablePullDownRefresh": true
 }

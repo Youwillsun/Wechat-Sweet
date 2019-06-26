@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    // 存放发表的段子内容
+    FunnyContent:''
   },
 
   /**
@@ -15,32 +16,71 @@ Page({
 
   },
 
-  postingFunny(){
-    wx.showToast({
-      title: '这是发表段子帖子的事件',
-      icon: 'none',
-      image: '',
-      duration: 1500,
-      mask: false,
-      success: (result) => {
-        // 清空文本
-        console.log(123)
+  // 获取写下的段子文本
+  FunnyContent(e){
+    var that = this;
+    that.setData({
+      FunnyContent: e.detail.value
+    })
+  },
 
-        // 跳转页面
-        wx.switchTab({
-          url: '../funny/funny',
-          success: (result)=>{
-            
-          },
-          fail: ()=>{},
-          complete: ()=>{}
-        });
-          
-      },
-      fail: () => {},
-      complete: () => {}
-    });
-      
+  // 把段子发给后台
+  uploadFunny(){
+    var that = this;
+    console.log(that.data.FunnyContent)
+    if(that.data.FunnyContent == ''){
+      wx.showToast({
+        title: '还没填写段子哦',
+        duration: 1500
+      })
+    }else{
+      // 从本地存储中获取到guid的数据
+      wx.getStorage({
+        key: 'Guid',
+        // 获取成功，则发送请求
+        success(res) {
+          wx.request({
+            url: "https://www.barteam.cn/ApiRoot/UpLoadJoke/UpLoadJokes",
+            data: {
+              "guid": res.data,
+              "JokeContent": that.data.FunnyContent
+            },
+            header: { 'content-type': 'application/json', 'cookie': wx.getStorageSync('sessionid') },
+            method: 'POST',
+            dataType: 'json',
+            responseType: 'text',
+            success: (result) => {
+              var res = result.data;
+              if (res.status == 'ok') {
+                wx.showToast({
+                  title: res.mess,
+                  duration: 1500
+                });
+              } else {
+                wx.showToast({
+                  title: res.mess,
+                  duration: 1500
+                });
+              }
+              // 趣图发表完成之后，重定向到本页面，完成刷新清除数据的效果
+              wx.redirectTo({
+                url: 'postingFunny',
+              })
+            },
+            // 请求失败，展示失败信息
+            fail: (result) => {
+              var res = result.data;
+              if (res.status == 'fail') {
+                wx.showToast({
+                  title: res.mess,
+                  duration: 1500
+                });
+              }
+            }
+          });
+        }
+      });
+    }
   },
 
   /**

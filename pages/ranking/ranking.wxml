@@ -1,2 +1,8 @@
-<!--pages/ranking/ranking.wxml-->
-<text>pages/ranking/ranking.wxml</text>
+<view class="rank_wrap">
+    <view class="funnyImg" wx:for="{{funnyImg}}" wx:key="{{index}}">
+        <view class="rank">Top {{index+1}}</view>
+        <image src="{{item.headImg}}"></image>
+        <view class="name">{{item.nickName}}</view>
+        <view class="likes">点赞:{{item.praisedNum}}</view>
+    </view>
+</view>

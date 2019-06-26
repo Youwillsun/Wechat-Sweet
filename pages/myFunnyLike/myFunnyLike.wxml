@@ -1,3 +1,3 @@
 <view class="myfLikeContainer">
-    <funnyCpt></funnyCpt>
+    <funnyCpt jokeInfo="{{myFunnyLikeInfo}}"></funnyCpt>
 </view>
