@@ -2,18 +2,18 @@
 <view class='commentContainer'>
   <!-- 发送评论 -->
   <view class="sendComment">
-    <textarea type='text' class='commentBox' placeholder='请发表你的评论！' maxlength='200'></textarea>
-    <button size='mini' class='commentBtn'>发表评论</button>
+    <textarea type='text' class='commentBox' placeholder='请发表你的评论！' maxlength='200' bindinput='sendComContent' data-type="comContent" value='{{comContent}}'></textarea>
+    <button size='mini' class='commentBtn' bindtap="submitCom">发表评论</button>
   </view>
   <!-- 评论列表 -->
   <view class='commentListContainer'>
     <view class='commentList' wx:for="{{commentList}}" wx:key="index">
       <view class='commentInfo'>
-        <image src='{{item.user_avatar}}'></image>
-        <text class='userName'>{{item.user_name}}</text>
+        <image src='{{item.criticsHeadImg}}'></image>
+        <text class='userName'>{{item.criticsNickName}}</text>
       </view>
       <view class='commentContent'>
-        <text>{{item.comment_content}}</text>
+        <text>{{item.content}}</text>
       </view>
     </view>
   </view>

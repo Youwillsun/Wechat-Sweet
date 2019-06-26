@@ -3,5 +3,6 @@
   "usingComponents": {
     "funnyCpt":"../../components/funnyCpt/funnyCpt",
     "comment":"../../components/comment/comment"
-  }
+  },
+  "enablePullDownRefresh": true
 }

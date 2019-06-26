@@ -79,7 +79,6 @@ Page({
   //上传图片
   uploadImg() {
     var that = this;
-    console.log(that.data.ImgBase64)
     // 判断数据不能为空
     if (that.data.describeWord == "") {
       wx.showToast({
@@ -121,6 +120,10 @@ Page({
                   duration: 1500
                 });
               }
+              // 趣图发表完成之后，重定向到本页面，完成刷新清除数据的效果
+              wx.redirectTo({
+                url: 'postingImg',
+              })
             },
             // 请求失败，展示失败信息
             fail: (result) => {
@@ -170,7 +173,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    
   },
 
   /**

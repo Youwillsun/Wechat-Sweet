@@ -67,8 +67,10 @@ Page({
   onUnload: function() {
 
   },
+  // 设置下拉刷新事件
   onPullDownRefresh: function() {
-
+    this.getMyImgInfo();
+    wx.stopPullDownRefresh();
   },
   onReachBottom: function() {
 

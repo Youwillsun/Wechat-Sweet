@@ -3,5 +3,6 @@
     "usingComponents": {
       "img": "../../components/img/img",
       "comment": "../../components/comment/comment"
-    }
+    },
+    "enablePullDownRefresh": true
   }

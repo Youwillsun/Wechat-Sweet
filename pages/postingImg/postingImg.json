@@ -1,4 +1,5 @@
 {
   "navigationBarTitleText":"发趣图帖",
-  "usingComponents": {}
+  "usingComponents": {},
+  "enablePullDownRefresh": true
 }

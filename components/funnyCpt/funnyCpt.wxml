@@ -1,24 +1,24 @@
 <!-- components/funny/funny.wxml -->
 <view class="panelBox" id="panelBox">
-  <view class="funnyCptContainer" bindtap="funnyComment">
+  <view class="funnyCptContainer" wx:for="{{jokeInfoList}}" wx:key="{{jokeInfoList.id}}">
     <!-- 头部 -->
     <view class="header">
-      <image class="user_HeadImg" src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1869732378,30123881&fm=26&gp=0.jpg" lazy-load="true" catchtap="headerEvent"></image>
-      <text class="user_NickName">迪丽热巴</text>
+      <image class="user_HeadImg" src="{{item.userHeadImg}}" lazy-load="true" catchtap="headerEvent"></image>
+      <text class="user_NickName">{{item.userNickName}}</text>
     </view>
     <!-- 标题+段子 -->
     <view class="content">
       <view class="funnyCptContent" id="funnyCptContentDetail">
-        来个段子:有位非常漂亮的女同事，有天起晚了没有时间化妆便急忙冲到公司。结果那天她被记旷工了。来个段子:有位非常漂亮的女同事，有天起晚了没有时间化妆便急忙冲到公司。结果那天她被记旷工了。来个段子:有位非常漂亮的女同事，有天起晚了没有时间化妆便急忙冲到公司。结果那天她被记旷工了。来个段子:有位非常漂亮的女同事，有天起晚了没有时间化妆便急忙冲到公司。结果那天她被记旷工了。
+        {{item.jokeContent}}
       </view>
     </view>
     <!-- 评论+点赞 -->
     <view class="footer">
-      <view class="fa fa-commenting-o">
-        <text class="comment">20</text>
+      <view class="fa fa-commenting-o" catchtap="funnyDetail" data-id="{{item.id}}">
+        <text class="comment">评论：{{item.commentNum}}</text>
       </view>
-      <view class="fa fa-thumbs-o-up">
-        <text class="like" catchtap="likeEvent">10</text>
+      <view class="fa fa-thumbs-o-up" catchtap="likeEvent" data-id="{{item.id}}">
+        <text class="like">点赞：{{item.praisedNum}}</text>
       </view>
     </view>
   </view>

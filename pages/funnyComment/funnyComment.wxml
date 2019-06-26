@@ -1,4 +1,6 @@
 <view class="fctContainer">
-    <funnyCpt></funnyCpt>
-    <comment></comment>
+  <!-- 传给段子评论的被评论的数据 -->
+  <funnyCpt JokeInfoData="{{JokeInfoData}}"></funnyCpt> 
+  <!-- 传给评论组件的评论数据 -->
+  <comment JokeComData="{{JokeComData}}" indexId="{{funnyId}}"></comment>
 </view>

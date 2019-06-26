@@ -1,4 +1,5 @@
 <view class="commentContainer">
-  <img url="{{URL}}"></img>
-  <comment></comment>
+  <img url="{{URL}}" ImgData="{{funnyInfoData}}"></img>
+  <!-- 把评论数据传给评论组件，把趣图的id传给子组件 -->
+  <comment funnyComData="{{funnyComData}}" indexId="{{indexId}}"></comment>
 </view>
