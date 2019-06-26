@@ -19,6 +19,27 @@ Page({
     this.getData();
   },
 
+  onPullDownRefresh(){
+    wx.startPullDownRefresh({
+      success: (result)=>{
+        wx.showToast({
+          title: '这是下来时见',
+          icon: 'none',
+          image: '',
+          duration: 1500,
+          mask: false,
+          success: (result)=>{
+            wx.stopPullDownRefresh();
+          },
+          fail: ()=>{},
+          complete: ()=>{}
+        });
+      },
+      fail: ()=>{},
+      complete: ()=>{}
+    });
+  },
+
   //页面加载时获取传过来的接口数据并渲染
   getData() {
     var that = this;
@@ -58,6 +79,8 @@ Page({
       }
     });
   },
+
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成

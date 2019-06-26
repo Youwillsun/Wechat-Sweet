@@ -23,8 +23,7 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Sweet",
     "navigationBarTextStyle": "black",
-    "backgroundColor": "#eeeeee",
-    "enablePullDownRefresh": true
+    "backgroundColor": "#eeeeee"
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {

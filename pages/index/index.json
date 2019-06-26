@@ -2,5 +2,6 @@
   "navigationBarTitleText": "趣图",
   "usingComponents": {
     "img":"../../components/img/img"
-  }
+  },
+  "enablePullDownRefresh": true
 }
