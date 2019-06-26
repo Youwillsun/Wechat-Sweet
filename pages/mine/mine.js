@@ -58,23 +58,24 @@ Page({
   myImg() {
     wx.navigateTo({
       url: '../myImg/myImg',
-      success: (result) => {
-
-      },
+      success: (result) => { },
       fail: () => { },
       complete: () => { }
     });
   },
   // 点击进入我的趣图评论页面
   myImgComment() {
-    wx.navigateTo({
-      url: '../indexComment/indexComment',
-      success: (result) => {
-
-      },
-      fail: () => { },
-      complete: () => { }
-    });
+    // wx.navigateTo({
+    //   url: '../indexComment/indexComment',
+    //   success: (result) => {},
+    //   fail: () => { },
+    //   complete: () => { }
+    // });
+    wx.showToast({
+      title: '功能暂未开放',
+      icon: 'none',
+      duration: 1000
+    })
   },
   // 点击进入我点赞的趣图
   myImgLike() {
@@ -101,14 +102,17 @@ Page({
   },
   // 点击进入我的趣图评论页面
   myFunnyComment() {
-    wx.navigateTo({
-      url: '../funnyComment/funnyComment',
-      success: (result) => {
-
-      },
-      fail: () => { },
-      complete: () => { }
-    });
+    // wx.navigateTo({
+    //   url: '../funnyComment/funnyComment',
+    //   success: (result) => {},
+    //   fail: () => { },
+    //   complete: () => { }
+    // });
+    wx.showToast({
+      title: '功能暂未开放',
+      icon: 'none',
+      duration: 1000
+    })
   },
   // 点击进入我点赞的趣图
   myFunnyLike() {
